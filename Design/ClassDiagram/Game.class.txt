@@ -1,0 +1,49 @@
+# Game
+
+Attributes:
+
+Board board
+
+GameStatus
+
+Color turn (either BLACK or WHITE)
+
+set<Piece> whitePieces
+
+set<Piece> blackPieces
+
+Methods:
+
+main():
+
+initialiseGame()
+
+while(true):
+
+Prompt the user to input s1, s2
+
+move(s1, s2) // ensure validMove logic here
+
+if(isGameOver()): announced result and halt while
+
+updateState()
+
+
+
+initialiseGame()
+
+initBoard(): create boards and all the pieces. Add these into set<Pieces> as well
+
+initialise gameStatus to WHITE_TURN
+
+initialise turn to WHITE
+
+isGameOver()
+
+if(isCheckMate()): announce winner
+
+isStalemate(): announce draw
+
+updateState():
+
+update gameStatus, turn
