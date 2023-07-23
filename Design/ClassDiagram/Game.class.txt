@@ -47,3 +47,23 @@ isStalemate(): announce draw
 updateState():
 
 update gameStatus, turn
+
+
+
+try_move(s1, s2) → bool:
+
+boardCopy = deepcopy(board)
+if s1 isEmpty(), return false
+Get all the movable & threatend position of the s1.piece, if s2 is not any of them return false
+board_copy.execute_move(s1, s2)
+for all the other-side piece, if current_king is in any of them threatend position, return false
+return true
+‌
+
+This method will check if a move is valid, based on:
+
+there is a piece to move
+the piece is right color,
+movable by the picked piece
+does not make the current king in check
+this will be called before board.execute_move is used.
