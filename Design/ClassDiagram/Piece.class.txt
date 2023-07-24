@@ -1,0 +1,1 @@
+per the design of Game, need get_threatend_positions per the design of Game, need get_threatend_positions and get_movable_positions
