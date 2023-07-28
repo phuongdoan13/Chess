@@ -1,69 +1,12 @@
-# Game
-
-Attributes:
-
-Board board
-
-GameStatus
-
-Color turn (either BLACK or WHITE)
-
-set<Piece> whitePieces
-
-set<Piece> blackPieces
-
-Methods:
 
 main():
 
-initialiseGame()
+  initialiseGame()
 
-while(true):
-
-Prompt the user to input s1, s2
-
-move(s1, s2) // ensure validMove logic here
-
-if(isGameOver()): announced result and halt while
-
-updateState()
-
-
-
-initialiseGame()
-
-initBoard(): create boards and all the pieces. Add these into set<Pieces> as well
-
-initialise gameStatus to WHITE_TURN
-
-initialise turn to WHITE
-
-isGameOver()
-
-if(isCheckMate()): announce winner
-
-isStalemate(): announce draw
-
-updateState():
-
-update gameStatus, turn
-
-
-
-try_move(s1, s2) → bool:
-
-boardCopy = deepcopy(board)
-if s1 isEmpty(), return false
-Get all the movable & threatend position of the s1.piece, if s2 is not any of them return false
-board_copy.execute_move(s1, s2)
-for all the other-side piece, if current_king is in any of them threatend position, return false
-return true
-‌
-
-This method will check if a move is valid, based on:
-
-there is a piece to move
-the piece is right color,
-movable by the picked piece
-does not make the current king in check
-this will be called before board.execute_move is used.
+  while(true):
+      1. checkIfCheckmateOrStalemate()
+      2. if(isGameOver()) -> announce result and break
+      3. do(PromptInput()) while(!try_move(s1, s2))
+      4. board.execute_move(*)
+      5. checkCheck()
+      6. updateTurn()
