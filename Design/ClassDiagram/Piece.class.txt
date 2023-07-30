@@ -1,1 +1,14 @@
-per the design of Game, need get_threatend_positions per the design of Game, need get_threatend_positions and get_movable_positions
+Attributes:
+
+hasMoved: bool
+color: Color
+pieceType: PieceType
+increments: int[][]
+isBeamMovable: bool
+Methods:
+
+‌
+
+constructor(
+abs get_threatened_positions() → Position[]
+abs get_movable_positions() → Position[]
