@@ -1,1 +1,7 @@
-per the design of Game, need execute_move
++ excute_move(x1, y1, x2, y2): move one piece to another
+
++ get_piece(x, y):
+
++ get_beam_threatened(x, y, color, x_increment, y_increment)
+
++ get_spot_threatened(x, y, color, x_increment, y_increment)
