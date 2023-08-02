@@ -12,3 +12,7 @@ Methods:
 constructor(
 abs get_threatened_positions() → Position[]
 abs get_movable_positions() → Position[]
+
+
+class PieceFactory():
+static create(pieceType, color)
