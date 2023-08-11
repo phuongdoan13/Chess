@@ -1,0 +1,21 @@
+# Difficulty:
+1. Black and White
+2. First move
+3. En passant
+4. Promote
+
+#Solution
+1. PieceFactory
+
+2. Use state
+
+3. Check Check next to && LastPieceMove in Game && targetOpponentPawn didLeap==true
+
+4. 
+  1) Xoá khỏi Square
+  2) Xoá khỏi set
+  3) PieceFactory: Một trong 4 con Q, B, N, R. Nếu là rook thì set hasMoved=false
+  4) Add Piece into set
+
+# Attribute 
+didLeap: bool = false
