@@ -16,7 +16,7 @@ class Parser{
     return "Thank you for inputting your move";
   }
 
-  private checkIfInputIsStandardized(move: string): boolean{
+  public checkIfInputIsStandardized(move: string): boolean{
     if(move.length <= 2){
       return false;
     }
@@ -25,3 +25,5 @@ class Parser{
     return regexPawnMove.test(move) || regexOthersMove.test(move);
   }
 }
+
+export default Parser;
